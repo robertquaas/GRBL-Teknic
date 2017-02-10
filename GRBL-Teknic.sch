@@ -3135,7 +3135,7 @@ USB/UART BRIDGE</text>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="ON" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="GREEN"/>
+<part name="ON" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="SM0805GCL"/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
@@ -3150,8 +3150,8 @@ USB/UART BRIDGE</text>
 <part name="U$2" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
 <part name="X3" library="microbuilder" deviceset="USB_W_SHIELD" device="_20329" value="20329"/>
-<part name="TXLED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="YELLOW"/>
-<part name="RXLED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="YELLOW"/>
+<part name="TXLED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="SM0805YCL"/>
+<part name="RXLED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="SM0805YCL"/>
 <part name="U$13" library="microbuilder" deviceset="GND" device=""/>
 <part name="U$21" library="microbuilder" deviceset="GND" device=""/>
 <part name="U4" library="microbuilder" deviceset="FT231X" device="" value="FT231XQ-x "/>
@@ -3164,7 +3164,7 @@ USB/UART BRIDGE</text>
 <part name="C15" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
 <part name="U$6" library="microbuilder" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
-<part name="RESET" library="microbuilder" deviceset="SWITCH_TACT_SMT" device="4.6X2.8" value="KMR2"/>
+<part name="RESET" library="microbuilder" deviceset="SWITCH_TACT_SMT" device="4.6X2.8" value="KMR211G LFS"/>
 <part name="R8" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="ERJ-T06J103V"/>
 <part name="R11" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="ERJ-T06J102V"/>
 <part name="D3" library="microbuilder" deviceset="DIODE-SCHOTTKY" device="SOD-123" value="NRVB120VLSFT1G"/>
