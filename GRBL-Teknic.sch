@@ -64,6 +64,9 @@
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -87,6 +90,8 @@
 <layer number="111" name="111" color="7" fill="1" visible="no" active="no"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="no" active="no"/>
 <layer number="113" name="ReferenceLS" color="7" fill="1" visible="no" active="no"/>
+<layer number="114" name="Badge_Outline" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="ReferenceISLANDS" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="no" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
@@ -97,6 +102,7 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="no" active="no"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
@@ -132,6 +138,12 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="yes" active="yes"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="yes" active="yes"/>
+<layer number="225" name="225bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="226" name="226bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="227" name="227bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="228" name="228bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="229" name="229bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="230" name="230bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="no" active="no"/>
 <layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
 <layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
@@ -140,6 +152,7 @@
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic>
 <libraries>
@@ -1582,113 +1595,6 @@ DIN A3, landscape with location and doc. field</description>
 <rectangle x1="-1.27" y1="-1.27" x2="-0.254" y2="-0.254" layer="31"/>
 <rectangle x1="0.254" y1="-1.27" x2="1.27" y2="-0.254" layer="31"/>
 </package>
-<package name="PANASONIC_C">
-<description>&lt;b&gt;Panasonic Aluminium Electrolytic Capacitor VS-Serie Package C&lt;/b&gt;</description>
-<wire x1="-2.6" y1="2.6" x2="1.25" y2="2.6" width="0.1016" layer="51"/>
-<wire x1="1.25" y1="2.6" x2="2.6" y2="1.25" width="0.1016" layer="51"/>
-<wire x1="2.6" y1="1.25" x2="2.6" y2="-1.25" width="0.1016" layer="51"/>
-<wire x1="2.6" y1="-1.25" x2="1.25" y2="-2.6" width="0.1016" layer="51"/>
-<wire x1="1.25" y1="-2.6" x2="-2.6" y2="-2.6" width="0.1016" layer="51"/>
-<wire x1="-2.6" y1="-2.6" x2="-2.6" y2="2.6" width="0.1016" layer="51"/>
-<wire x1="-2.6" y1="0.95" x2="-2.6" y2="2.6" width="0.2032" layer="21"/>
-<wire x1="-2.6" y1="2.6" x2="1.25" y2="2.6" width="0.2032" layer="21"/>
-<wire x1="1.25" y1="2.6" x2="2.6" y2="1.25" width="0.2032" layer="21"/>
-<wire x1="2.6" y1="1.25" x2="2.6" y2="0.95" width="0.2032" layer="21"/>
-<wire x1="2.6" y1="-0.95" x2="2.6" y2="-1.25" width="0.2032" layer="21"/>
-<wire x1="2.6" y1="-1.25" x2="1.25" y2="-2.6" width="0.2032" layer="21"/>
-<wire x1="1.25" y1="-2.6" x2="-2.6" y2="-2.6" width="0.2032" layer="21"/>
-<wire x1="-2.6" y1="-2.6" x2="-2.6" y2="-0.95" width="0.2032" layer="21"/>
-<wire x1="-1.55" y1="1.85" x2="-1.55" y2="-1.85" width="0.1016" layer="51"/>
-<circle x="0" y="0" radius="2.45" width="0.1016" layer="51"/>
-<smd name="-" x="-2.05" y="0" dx="2.6" dy="1.4" layer="1"/>
-<smd name="+" x="2.05" y="0" dx="2.6" dy="1.4" layer="1"/>
-<text x="-2.54" y="2.794" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-2.54" y="-3.683" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-2.95" y1="-0.35" x2="-2.4" y2="0.35" layer="51"/>
-<rectangle x1="2.4" y1="-0.35" x2="2.95" y2="0.35" layer="51"/>
-<polygon width="0.1016" layer="51">
-<vertex x="-1.6" y="1.8"/>
-<vertex x="-2" y="1.35"/>
-<vertex x="-2.25" y="0.75"/>
-<vertex x="-2.45" y="0.05"/>
-<vertex x="-2.25" y="-0.75"/>
-<vertex x="-1.95" y="-1.35"/>
-<vertex x="-1.6" y="-1.8"/>
-</polygon>
-</package>
-<package name="PANASONIC_D">
-<description>&lt;b&gt;Panasonic Aluminium Electrolytic Capacitor VS-Serie Package D&lt;/b&gt;</description>
-<wire x1="-3.25" y1="3.25" x2="1.55" y2="3.25" width="0.1016" layer="51"/>
-<wire x1="1.55" y1="3.25" x2="3.25" y2="1.55" width="0.1016" layer="51"/>
-<wire x1="3.25" y1="1.55" x2="3.25" y2="-1.55" width="0.1016" layer="51"/>
-<wire x1="3.25" y1="-1.55" x2="1.55" y2="-3.25" width="0.1016" layer="51"/>
-<wire x1="1.55" y1="-3.25" x2="-3.25" y2="-3.25" width="0.1016" layer="51"/>
-<wire x1="-3.25" y1="-3.25" x2="-3.25" y2="3.25" width="0.1016" layer="51"/>
-<wire x1="-3.25" y1="0.95" x2="-3.25" y2="3.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="3.25" x2="1.55" y2="3.25" width="0.2032" layer="21"/>
-<wire x1="1.55" y1="3.25" x2="3.25" y2="1.55" width="0.2032" layer="21"/>
-<wire x1="3.25" y1="1.55" x2="3.25" y2="0.95" width="0.2032" layer="21"/>
-<wire x1="3.25" y1="-0.95" x2="3.25" y2="-1.55" width="0.2032" layer="21"/>
-<wire x1="3.25" y1="-1.55" x2="1.55" y2="-3.25" width="0.2032" layer="21"/>
-<wire x1="1.55" y1="-3.25" x2="-3.25" y2="-3.25" width="0.2032" layer="21"/>
-<wire x1="-3.25" y1="-3.25" x2="-3.25" y2="-0.95" width="0.2032" layer="21"/>
-<wire x1="-2.1" y1="2.25" x2="-2.1" y2="-2.2" width="0.1016" layer="51"/>
-<circle x="0" y="0" radius="3.1" width="0.1016" layer="51"/>
-<smd name="-" x="-2.654" y="0" dx="3.556" dy="1.4" layer="1"/>
-<smd name="+" x="2.654" y="0" dx="3.556" dy="1.4" layer="1"/>
-<text x="-3.02" y="3.54" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="-3.048" y="-4.318" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="-3.65" y1="-0.35" x2="-3.05" y2="0.35" layer="51"/>
-<rectangle x1="3.05" y1="-0.35" x2="3.65" y2="0.35" layer="51"/>
-<polygon width="0.1016" layer="51">
-<vertex x="-2.15" y="2.15"/>
-<vertex x="-2.6" y="1.6"/>
-<vertex x="-2.9" y="0.9"/>
-<vertex x="-3.05" y="0"/>
-<vertex x="-2.9" y="-0.95"/>
-<vertex x="-2.55" y="-1.65"/>
-<vertex x="-2.15" y="-2.15"/>
-<vertex x="-2.15" y="2.1"/>
-</polygon>
-</package>
-<package name="CELEC_3.5MM_8MM">
-<description>&lt;b&gt;ELECTROLYTIC CAPACITOR&lt;/b&gt;&lt;p&gt;
-grid 3.5 mm, diameter 8 mm</description>
-<wire x1="-3.429" y1="1.143" x2="-2.667" y2="1.143" width="0.2032" layer="21"/>
-<wire x1="-3.048" y1="0.762" x2="-3.048" y2="1.524" width="0.2032" layer="21"/>
-<wire x1="-1.651" y1="0" x2="-0.762" y2="0" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.27" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.2032" layer="51"/>
-<wire x1="-0.254" y1="-1.27" x2="-0.254" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="-0.254" y1="1.27" x2="-0.762" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="1.27" x2="-0.762" y2="0" width="0.2032" layer="51"/>
-<wire x1="0.635" y1="0" x2="1.651" y2="0" width="0.2032" layer="51"/>
-<circle x="0" y="0" radius="4.064" width="0.2032" layer="21"/>
-<pad name="-" x="1.778" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
-<pad name="+" x="-1.778" y="0" drill="0.8128" diameter="1.6002"/>
-<text x="4.572" y="0" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="4.572" y="-0.762" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
-</package>
-<package name="CELEC_3.5MM_10MM">
-<description>&lt;b&gt;ELECTROLYTIC CAPACITOR&lt;/b&gt;&lt;p&gt;
-grid 3.5 mm, diameter 10 mm</description>
-<wire x1="-3.429" y1="1.143" x2="-2.667" y2="1.143" width="0.2032" layer="21"/>
-<wire x1="-3.048" y1="0.762" x2="-3.048" y2="1.524" width="0.2032" layer="21"/>
-<wire x1="-1.651" y1="0" x2="-0.762" y2="0" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.27" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.2032" layer="51"/>
-<wire x1="-0.254" y1="-1.27" x2="-0.254" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="-0.254" y1="1.27" x2="-0.762" y2="1.27" width="0.2032" layer="51"/>
-<wire x1="-0.762" y1="1.27" x2="-0.762" y2="0" width="0.2032" layer="51"/>
-<wire x1="0.635" y1="0" x2="1.651" y2="0" width="0.2032" layer="51"/>
-<circle x="0" y="0" radius="5.08" width="0.2032" layer="21"/>
-<pad name="-" x="1.778" y="0" drill="0.8128" diameter="1.6002" shape="octagon"/>
-<pad name="+" x="-1.778" y="0" drill="0.8128" diameter="1.6002"/>
-<text x="5.588" y="0.127" size="0.8128" layer="25" ratio="18">&gt;NAME</text>
-<text x="5.588" y="-0.635" size="0.4064" layer="27" ratio="10">&gt;VALUE</text>
-<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
-</package>
 </packages>
 <symbols>
 <symbol name="DIODE-SCHOTTKY">
@@ -1904,19 +1810,6 @@ USB/UART BRIDGE</text>
 <wire x1="12.7" y1="27.94" x2="12.7" y2="-30.48" width="0.254" layer="94"/>
 <wire x1="12.7" y1="-30.48" x2="-15.24" y2="-30.48" width="0.254" layer="94"/>
 <wire x1="-15.24" y1="-30.48" x2="-15.24" y2="27.94" width="0.254" layer="94"/>
-</symbol>
-<symbol name="CAPACITOR_POL">
-<wire x1="-1.27" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="1.27" y2="1.778" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.778" x2="-1.27" y2="1.778" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.778" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-0.635" y1="3.81" x2="-0.635" y2="3.048" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="3.429" x2="-0.254" y2="3.429" width="0.254" layer="94"/>
-<text x="-2.39" y="1.25" size="1.27" layer="95" font="vector" rot="R90" align="center">&gt;NAME</text>
-<text x="2.5" y="1.25" size="1.27" layer="96" font="vector" rot="R90" align="center">&gt;VALUE</text>
-<rectangle x1="-1.397" y1="0" x2="1.397" y2="0.889" layer="94"/>
-<pin name="+" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="-" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2834,68 +2727,6 @@ USB/UART BRIDGE</text>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CAP_ELECTROLYTIC" prefix="C" uservalue="yes">
-<description>&lt;p&gt;&lt;b&gt;Electrolytic Capacitors&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;SMT&lt;/b&gt;&lt;hr/&gt;&lt;/p&gt;
-&lt;b&gt;PANASONIC_C&lt;/b&gt; - Size C Panasonic Electrolytic Aluminum Capacitor
-&lt;ul&gt;
-&lt;li&gt;47µF 16V 20% Electrolytic Capacitor [Digikey: PCE3890TR-ND]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;b&gt;PANASONIC_D&lt;/b&gt; - Size D Panasonic Electrolytic Aluminum Capacitor
-&lt;ul&gt;
-&lt;li&gt;100µF 25V 20% Electrolytic Capacitor [Digikey: PCE3898TR-ND]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;b&gt;PTH&lt;/b&gt;&lt;hr/&gt;&lt;/p&gt;
-&lt;b&gt;3.5 mm grid, 8 mm diameter&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;b&gt;3.5 mm grid, 10 mm diameter&lt;/b&gt;
-&lt;ul&gt;
-&lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;</description>
-<gates>
-<gate name="G$1" symbol="CAPACITOR_POL" x="0" y="-2.54"/>
-</gates>
-<devices>
-<device name="PANASONIC_C" package="PANASONIC_C">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="PANASONIC_D" package="PANASONIC_D">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="PTH_3.5MMGRID_8MMDIA" package="CELEC_3.5MM_8MM">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="PTH_3.5MMGRID_10MMDIA" package="CELEC_3.5MM_10MM">
-<connects>
-<connect gate="G$1" pin="+" pad="+"/>
-<connect gate="G$1" pin="-" pad="-"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 <library name="con-molex-2">
@@ -3302,7 +3133,6 @@ USB/UART BRIDGE</text>
 <parts>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="10uF"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="ON" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="GREEN"/>
@@ -3310,13 +3140,12 @@ USB/UART BRIDGE</text>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
-<part name="C5" library="microbuilder" deviceset="CAP_CERAMIC" device="_0805MP" value="0.1uF"/>
-<part name="C6" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="0.1uF"/>
-<part name="C3" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="10uF"/>
-<part name="Y2" library="SmartPrj" deviceset="RESONATOR" device="MU" value="CSTCE16M0V53-R0 16MHZ"/>
-<part name="C10" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="0.1uF"/>
+<part name="C5" library="microbuilder" deviceset="CAP_CERAMIC" device="_0805MP" value="GRM21BR71E104KA01L"/>
+<part name="C6" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR71E104KA01L"/>
+<part name="Y2" library="SmartPrj" deviceset="RESONATOR" device="MU" value="CSTCE16M0V53-R0"/>
+<part name="C10" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR71E104KA01L"/>
 <part name="FRAME1" library="Misc" deviceset="A3L-LOC-MOD" device=""/>
-<part name="C12" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="10uF"/>
+<part name="C12" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
 <part name="GND25" library="supply1" deviceset="GND" device=""/>
 <part name="U$2" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="P+14" library="supply1" deviceset="+5V" device=""/>
@@ -3328,23 +3157,23 @@ USB/UART BRIDGE</text>
 <part name="U4" library="microbuilder" deviceset="FT231X" device="" value="FT231XQ-x "/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="U$1" library="microbuilder" deviceset="3.3V" device=""/>
-<part name="C9" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="0.1uF"/>
+<part name="C9" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
 <part name="U$3" library="microbuilder" deviceset="GND" device=""/>
-<part name="R4" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="22"/>
-<part name="R5" library="microbuilder" deviceset="RESISTOR" device="_0805MP" value="22"/>
-<part name="C15" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="0.1uF"/>
+<part name="R4" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="667-ERJ-T06J220V"/>
+<part name="R5" library="microbuilder" deviceset="RESISTOR" device="_0805MP" value="667-ERJ-T06J220V"/>
+<part name="C15" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
 <part name="U$6" library="microbuilder" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="RESET" library="microbuilder" deviceset="SWITCH_TACT_SMT" device="4.6X2.8" value="KMR2"/>
-<part name="R8" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="10K"/>
-<part name="R11" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="1K"/>
-<part name="D3" library="microbuilder" deviceset="DIODE-SCHOTTKY" device="SOD-123" value="MBR120"/>
+<part name="R8" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="ERJ-T06J103V"/>
+<part name="R11" library="microbuilder" deviceset="RESISTOR" device="0805_NOOUTLINE" value="ERJ-T06J102V"/>
+<part name="D3" library="microbuilder" deviceset="DIODE-SCHOTTKY" device="SOD-123" value="NRVB120VLSFT1G"/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="microbuilder" deviceset="RESISTOR_4PACK" device="" value="1K"/>
+<part name="R2" library="microbuilder" deviceset="RESISTOR_4PACK" device="" value="ERJ-T06J102V"/>
 <part name="U$4" library="microbuilder" deviceset="3.3V" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="U1" library="microbuilder" deviceset="VREG_SOT23-5" device="" value="MIC5225-5.0"/>
+<part name="U1" library="microbuilder" deviceset="VREG_SOT23-5" device="" value="MIC5225-5.0YM5-TR"/>
 <part name="U2" library="microbuilder" deviceset="ATMEGA328P" device="" value="ATmega328P-MU"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="ATX-POWER" library="con-molex-2" deviceset="555X-6" device="H" value="39-29-1068"/>
@@ -3355,9 +3184,8 @@ USB/UART BRIDGE</text>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="SPINDLE" library="con-molex-2" deviceset="555X-4" device="H" value="39-29-1048"/>
-<part name="PC1" library="microbuilder" deviceset="CAP_ELECTROLYTIC" device="PANASONIC_D" value="47uF/25V"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="D1" library="microbuilder" deviceset="DIODE-SCHOTTKY" device="SOD-123" value="MBR120"/>
+<part name="D1" library="microbuilder" deviceset="DIODE-SCHOTTKY" device="SOD-123" value="NRVB120VLSFT1G"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
@@ -3365,6 +3193,12 @@ USB/UART BRIDGE</text>
 <part name="Y-LIMIT" library="con-molex-2" deviceset="555X-2" device="H" value="39-29-1088"/>
 <part name="Z-LIMIT" library="con-molex-2" deviceset="555X-2" device="H" value="39-29-1088"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="C1" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E226ME44L"/>
+<part name="C2" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
+<part name="C3" library="microbuilder" deviceset="CAP_CERAMIC" device="0805-NOOUTLINE" value="GRM21BR61E106KA73L"/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
+<part name="GND15" library="supply1" deviceset="GND" device=""/>
+<part name="GND16" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3385,7 +3219,8 @@ USB/UART BRIDGE</text>
 <text x="81.28" y="170.18" size="2.54" layer="94" ratio="15" align="center">ATMEGA328 MCU</text>
 <wire x1="165.1" y1="5.08" x2="165.1" y2="91.44" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="165.1" y1="91.44" x2="165.1" y2="175.26" width="0.1524" layer="94" style="shortdash"/>
-<wire x1="383.54" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="383.54" y1="91.44" x2="218.44" y2="91.44" width="0.1524" layer="94" style="shortdash"/>
+<wire x1="218.44" y1="91.44" x2="165.1" y2="91.44" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="355.6" y1="256.54" x2="355.6" y2="175.26" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="330.2" y1="175.26" x2="355.6" y2="175.26" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="355.6" y1="175.26" x2="383.54" y2="175.26" width="0.1524" layer="94" style="shortdash"/>
@@ -3393,14 +3228,11 @@ USB/UART BRIDGE</text>
 <text x="187.96" y="170.18" size="2.54" layer="94" ratio="15" align="center">Teknic Motor Connectors</text>
 <text x="289.56" y="208.28" size="2.54" layer="94" ratio="15" align="center">Spindle Connector</text>
 <text x="187.96" y="86.36" size="2.54" layer="94" ratio="15" align="center">Limit Connectors</text>
+<wire x1="218.44" y1="91.44" x2="218.44" y2="5.08" width="0.1524" layer="94" style="shortdash"/>
 </plain>
 <instances>
 <instance part="GND2" gate="1" x="60.96" y="55.88"/>
-<instance part="GND3" gate="1" x="30.48" y="86.36"/>
-<instance part="C2" gate="G$1" x="259.08" y="220.98" smashed="yes" rot="R180">
-<attribute name="NAME" x="251.46" y="220.98" size="1.778" layer="95"/>
-<attribute name="VALUE" x="251.46" y="218.44" size="1.778" layer="96"/>
-</instance>
+<instance part="GND3" gate="1" x="27.94" y="88.9" rot="R270"/>
 <instance part="GND7" gate="1" x="259.08" y="208.28"/>
 <instance part="GND12" gate="1" x="45.72" y="124.46"/>
 <instance part="ON" gate="G$1" x="373.38" y="218.44" rot="R270"/>
@@ -3412,10 +3244,6 @@ USB/UART BRIDGE</text>
 <instance part="GND21" gate="1" x="307.34" y="220.98"/>
 <instance part="C5" gate="G$1" x="17.78" y="104.14" rot="R90"/>
 <instance part="C6" gate="G$1" x="53.34" y="66.04" rot="R180"/>
-<instance part="C3" gate="G$1" x="307.34" y="231.14" smashed="yes" rot="MR180">
-<attribute name="NAME" x="308.737" y="231.775" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="309.626" y="229.235" size="1.778" layer="96" rot="MR180"/>
-</instance>
 <instance part="Y2" gate="G$1" x="40.64" y="88.9" smashed="yes">
 <attribute name="VALUE" x="22.86" y="81.28" size="1.778" layer="96"/>
 </instance>
@@ -3452,8 +3280,8 @@ USB/UART BRIDGE</text>
 <instance part="R11" gate="G$1" x="109.22" y="33.02" rot="R180"/>
 <instance part="X3" gate="SHIELD" x="12.7" y="205.74" rot="R180"/>
 <instance part="D3" gate="G$1" x="60.96" y="241.3"/>
-<instance part="P+2" gate="1" x="71.12" y="243.84" smashed="yes">
-<attribute name="VALUE" x="69.215" y="243.84" size="1.778" layer="96"/>
+<instance part="P+2" gate="1" x="71.12" y="241.3" smashed="yes" rot="R270">
+<attribute name="VALUE" x="71.12" y="243.205" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="GND1" gate="1" x="15.24" y="203.2"/>
 <instance part="R2" gate="G$2" x="119.38" y="200.66"/>
@@ -3465,7 +3293,7 @@ USB/UART BRIDGE</text>
 </instance>
 <instance part="U1" gate="G$1" x="228.6" y="226.06"/>
 <instance part="U2" gate="G$1" x="83.82" y="71.12"/>
-<instance part="GND4" gate="1" x="172.72" y="116.84" rot="R270"/>
+<instance part="GND4" gate="1" x="177.8" y="144.78" rot="R180"/>
 <instance part="ATX-POWER" gate="-1" x="195.58" y="195.58" rot="R270"/>
 <instance part="ATX-POWER" gate="-2" x="190.5" y="195.58" rot="R270"/>
 <instance part="ATX-POWER" gate="-3" x="185.42" y="195.58" rot="R270"/>
@@ -3510,10 +3338,6 @@ USB/UART BRIDGE</text>
 <instance part="SPINDLE" gate="-2" x="312.42" y="190.5"/>
 <instance part="SPINDLE" gate="-3" x="312.42" y="185.42"/>
 <instance part="SPINDLE" gate="-4" x="312.42" y="180.34"/>
-<instance part="PC1" gate="G$1" x="205.74" y="218.44" smashed="yes">
-<attribute name="NAME" x="200.66" y="223.52" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="200.66" y="215.9" size="1.778" layer="96" rot="R270"/>
-</instance>
 <instance part="GND6" gate="1" x="205.74" y="208.28"/>
 <instance part="D1" gate="G$1" x="195.58" y="210.82" rot="R90"/>
 <instance part="P+1" gate="1" x="53.34" y="73.66" smashed="yes">
@@ -3531,7 +3355,13 @@ USB/UART BRIDGE</text>
 <instance part="Y-LIMIT" gate="-2" x="190.5" y="66.04" rot="R270"/>
 <instance part="Z-LIMIT" gate="-1" x="208.28" y="66.04" rot="R270"/>
 <instance part="Z-LIMIT" gate="-2" x="203.2" y="66.04" rot="R270"/>
-<instance part="GND10" gate="1" x="172.72" y="73.66" rot="R270"/>
+<instance part="GND10" gate="1" x="172.72" y="76.2" rot="R270"/>
+<instance part="C1" gate="G$1" x="205.74" y="218.44"/>
+<instance part="C2" gate="G$1" x="259.08" y="218.44"/>
+<instance part="C3" gate="G$1" x="307.34" y="228.6"/>
+<instance part="GND13" gate="1" x="220.98" y="144.78" rot="R180"/>
+<instance part="GND15" gate="1" x="264.16" y="144.78" rot="R180"/>
+<instance part="GND16" gate="1" x="307.34" y="144.78" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -3555,7 +3385,7 @@ USB/UART BRIDGE</text>
 <segment>
 <pinref part="D3" gate="G$1" pin="C"/>
 <pinref part="P+2" gate="1" pin="+5V"/>
-<wire x1="71.12" y1="241.3" x2="63.5" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="241.3" x2="63.5" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="76.2" y1="205.74" x2="58.42" y2="205.74" width="0.1524" layer="91"/>
@@ -3572,9 +3402,9 @@ USB/UART BRIDGE</text>
 <junction x="243.84" y="228.6"/>
 <wire x1="238.76" y1="228.6" x2="243.84" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="228.6" x2="259.08" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="228.6" x2="259.08" y2="228.6" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="OUT"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -3621,14 +3451,14 @@ USB/UART BRIDGE</text>
 <pinref part="U2" gate="G$1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="259.08" y1="215.9" x2="259.08" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="GND21" gate="1" pin="GND"/>
-<pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="307.34" y1="226.06" x2="307.34" y2="223.52" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="33.02" y1="88.9" x2="30.48" y2="88.9" width="0.1524" layer="91"/>
@@ -3692,72 +3522,6 @@ USB/UART BRIDGE</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="Y-MOTOR-3" gate="-5" pin="S"/>
-<wire x1="322.58" y1="114.3" x2="322.58" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="322.58" y1="116.84" x2="317.5" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="X-MOTOR" gate="-8" pin="S"/>
-<wire x1="317.5" y1="116.84" x2="312.42" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="116.84" x2="307.34" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="307.34" y1="116.84" x2="279.4" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="279.4" y1="116.84" x2="274.32" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="274.32" y1="116.84" x2="269.24" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="116.84" x2="264.16" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="116.84" x2="236.22" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="116.84" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="116.84" x2="226.06" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="116.84" x2="220.98" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="116.84" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="116.84" x2="187.96" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="116.84" x2="182.88" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="116.84" x2="177.8" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="116.84" x2="175.26" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="114.3" x2="177.8" y2="116.84" width="0.1524" layer="91"/>
-<junction x="177.8" y="116.84"/>
-<pinref part="X-MOTOR" gate="-7" pin="S"/>
-<wire x1="182.88" y1="114.3" x2="182.88" y2="116.84" width="0.1524" layer="91"/>
-<junction x="182.88" y="116.84"/>
-<pinref part="X-MOTOR" gate="-6" pin="S"/>
-<wire x1="187.96" y1="114.3" x2="187.96" y2="116.84" width="0.1524" layer="91"/>
-<junction x="187.96" y="116.84"/>
-<pinref part="X-MOTOR" gate="-5" pin="S"/>
-<wire x1="193.04" y1="114.3" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
-<junction x="193.04" y="116.84"/>
-<pinref part="Y-MOTOR-1" gate="-8" pin="S"/>
-<wire x1="220.98" y1="114.3" x2="220.98" y2="116.84" width="0.1524" layer="91"/>
-<junction x="220.98" y="116.84"/>
-<pinref part="Y-MOTOR-1" gate="-7" pin="S"/>
-<wire x1="226.06" y1="114.3" x2="226.06" y2="116.84" width="0.1524" layer="91"/>
-<junction x="226.06" y="116.84"/>
-<pinref part="Y-MOTOR-1" gate="-6" pin="S"/>
-<wire x1="231.14" y1="114.3" x2="231.14" y2="116.84" width="0.1524" layer="91"/>
-<junction x="231.14" y="116.84"/>
-<pinref part="Y-MOTOR-1" gate="-5" pin="S"/>
-<wire x1="236.22" y1="114.3" x2="236.22" y2="116.84" width="0.1524" layer="91"/>
-<junction x="236.22" y="116.84"/>
-<pinref part="Y-MOTOR-2" gate="-8" pin="S"/>
-<wire x1="264.16" y1="114.3" x2="264.16" y2="116.84" width="0.1524" layer="91"/>
-<junction x="264.16" y="116.84"/>
-<pinref part="Y-MOTOR-2" gate="-7" pin="S"/>
-<wire x1="269.24" y1="114.3" x2="269.24" y2="116.84" width="0.1524" layer="91"/>
-<junction x="269.24" y="116.84"/>
-<pinref part="Y-MOTOR-2" gate="-6" pin="S"/>
-<wire x1="274.32" y1="114.3" x2="274.32" y2="116.84" width="0.1524" layer="91"/>
-<junction x="274.32" y="116.84"/>
-<pinref part="Y-MOTOR-2" gate="-5" pin="S"/>
-<wire x1="279.4" y1="114.3" x2="279.4" y2="116.84" width="0.1524" layer="91"/>
-<junction x="279.4" y="116.84"/>
-<pinref part="Y-MOTOR-3" gate="-8" pin="S"/>
-<wire x1="307.34" y1="114.3" x2="307.34" y2="116.84" width="0.1524" layer="91"/>
-<junction x="307.34" y="116.84"/>
-<pinref part="Y-MOTOR-3" gate="-7" pin="S"/>
-<wire x1="312.42" y1="114.3" x2="312.42" y2="116.84" width="0.1524" layer="91"/>
-<junction x="312.42" y="116.84"/>
-<pinref part="Y-MOTOR-3" gate="-6" pin="S"/>
-<wire x1="317.5" y1="114.3" x2="317.5" y2="116.84" width="0.1524" layer="91"/>
-<junction x="317.5" y="116.84"/>
-</segment>
-<segment>
 <pinref part="ATX-POWER" gate="-4" pin="S"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="180.34" y1="198.12" x2="180.34" y2="205.74" width="0.1524" layer="91"/>
@@ -3773,22 +3537,83 @@ USB/UART BRIDGE</text>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="PC1" gate="G$1" pin="-"/>
 <wire x1="205.74" y1="210.82" x2="205.74" y2="215.9" width="0.1524" layer="91"/>
+<pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="Z-LIMIT" gate="-2" pin="S"/>
-<wire x1="203.2" y1="68.58" x2="203.2" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="68.58" x2="203.2" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="203.2" y1="73.66" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="76.2" x2="175.26" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="Y-LIMIT" gate="-2" pin="S"/>
-<wire x1="190.5" y1="73.66" x2="177.8" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="73.66" x2="175.26" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="68.58" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
-<junction x="190.5" y="73.66"/>
+<wire x1="190.5" y1="73.66" x2="175.26" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="73.66" x2="175.26" y2="76.2" width="0.1524" layer="91"/>
+<junction x="175.26" y="76.2"/>
 <pinref part="X-LIMIT" gate="-2" pin="S"/>
-<wire x1="177.8" y1="68.58" x2="177.8" y2="73.66" width="0.1524" layer="91"/>
-<junction x="177.8" y="73.66"/>
+<wire x1="177.8" y1="68.58" x2="177.8" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="71.12" x2="175.26" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="71.12" x2="175.26" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X-MOTOR" gate="-8" pin="S"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="177.8" y1="114.3" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="X-MOTOR" gate="-7" pin="S"/>
+<wire x1="182.88" y1="114.3" x2="182.88" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="142.24" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
+<junction x="177.8" y="142.24"/>
+<pinref part="X-MOTOR" gate="-6" pin="S"/>
+<wire x1="187.96" y1="114.3" x2="187.96" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="142.24" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="X-MOTOR" gate="-5" pin="S"/>
+<wire x1="193.04" y1="114.3" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="142.24" x2="177.8" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Y-MOTOR-1" gate="-8" pin="S"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="220.98" y1="114.3" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-1" gate="-7" pin="S"/>
+<wire x1="226.06" y1="114.3" x2="226.06" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="142.24" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
+<junction x="220.98" y="142.24"/>
+<pinref part="Y-MOTOR-1" gate="-6" pin="S"/>
+<wire x1="231.14" y1="114.3" x2="231.14" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="142.24" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-1" gate="-5" pin="S"/>
+<wire x1="236.22" y1="114.3" x2="236.22" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="142.24" x2="220.98" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Y-MOTOR-2" gate="-8" pin="S"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+<wire x1="264.16" y1="114.3" x2="264.16" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-2" gate="-7" pin="S"/>
+<wire x1="269.24" y1="114.3" x2="269.24" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="142.24" x2="264.16" y2="142.24" width="0.1524" layer="91"/>
+<junction x="264.16" y="142.24"/>
+<pinref part="Y-MOTOR-2" gate="-6" pin="S"/>
+<wire x1="274.32" y1="114.3" x2="274.32" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="142.24" x2="264.16" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-2" gate="-5" pin="S"/>
+<wire x1="279.4" y1="114.3" x2="279.4" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="142.24" x2="264.16" y2="142.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Y-MOTOR-3" gate="-8" pin="S"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="307.34" y1="114.3" x2="307.34" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-3" gate="-7" pin="S"/>
+<wire x1="312.42" y1="114.3" x2="312.42" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="142.24" x2="307.34" y2="142.24" width="0.1524" layer="91"/>
+<junction x="307.34" y="142.24"/>
+<pinref part="Y-MOTOR-3" gate="-6" pin="S"/>
+<wire x1="317.5" y1="114.3" x2="317.5" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="142.24" x2="307.34" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="Y-MOTOR-3" gate="-5" pin="S"/>
+<wire x1="322.58" y1="114.3" x2="322.58" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="142.24" x2="307.34" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="AREF" class="4">
@@ -3847,9 +3672,9 @@ USB/UART BRIDGE</text>
 <pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="195.58" y1="213.36" x2="195.58" y2="228.6" width="0.1524" layer="91"/>
 <junction x="195.58" y="213.36"/>
-<pinref part="PC1" gate="G$1" pin="+"/>
 <wire x1="205.74" y1="223.52" x2="205.74" y2="228.6" width="0.1524" layer="91"/>
 <junction x="205.74" y="228.6"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SPINDIR" class="0">
@@ -4101,9 +3926,9 @@ USB/UART BRIDGE</text>
 </net>
 <net name="3.3V" class="0">
 <segment>
-<pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="U$2" gate="G$1" pin="3.3V"/>
 <wire x1="307.34" y1="238.76" x2="307.34" y2="233.68" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="76.2" y1="203.2" x2="73.66" y2="203.2" width="0.1524" layer="91"/>
