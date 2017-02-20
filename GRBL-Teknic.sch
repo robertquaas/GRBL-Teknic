@@ -1124,6 +1124,7 @@ Shield form compatible with the Arduino Uno R3.
 <part name="LIMY+" library="con-molex-2" deviceset="555X-2" device="V"/>
 <part name="LIMZ+" library="con-molex-2" deviceset="555X-2" device="V"/>
 <part name="TOOL" library="con-molex-2" deviceset="555X-6" device="V"/>
+<part name="COOL" library="con-molex-2" deviceset="555X-2" device="V"/>
 </parts>
 <sheets>
 <sheet>
@@ -1167,6 +1168,8 @@ Shield form compatible with the Arduino Uno R3.
 <instance part="TOOL" gate="-4" x="27.94" y="-10.16" rot="R270"/>
 <instance part="TOOL" gate="-5" x="22.86" y="-10.16" rot="R270"/>
 <instance part="TOOL" gate="-6" x="17.78" y="-10.16" rot="R270"/>
+<instance part="COOL" gate="-1" x="5.08" y="-10.16" rot="R270"/>
+<instance part="COOL" gate="-2" x="0" y="-10.16" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -1176,6 +1179,9 @@ Shield form compatible with the Arduino Uno R3.
 <pinref part="B1" gate="G$1" pin="GND@0"/>
 <wire x1="17.78" y1="25.4" x2="12.7" y2="25.4" width="0.1524" layer="91"/>
 <label x="10.16" y="25.4" size="1.778" layer="95"/>
+<wire x1="12.7" y1="25.4" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="GND@1"/>
+<wire x1="12.7" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-40.64" y1="83.82" x2="-43.18" y2="83.82" width="0.1524" layer="91"/>
@@ -1254,8 +1260,9 @@ Shield form compatible with the Arduino Uno R3.
 <label x="-40.64" y="111.76" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="17.78" y1="27.94" x2="12.7" y2="27.94" width="0.1524" layer="91"/>
-<label x="10.16" y="27.94" size="1.778" layer="95"/>
+<wire x1="0" y1="-7.62" x2="0" y2="-2.54" width="0.1524" layer="91"/>
+<label x="0" y="-2.54" size="1.778" layer="95"/>
+<pinref part="COOL" gate="-2" pin="S"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -1385,6 +1392,14 @@ Shield form compatible with the Arduino Uno R3.
 <label x="43.18" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="COOL" class="0">
+<segment>
+<pinref part="COOL" gate="-1" pin="S"/>
+<wire x1="5.08" y1="-7.62" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="A3"/>
+<wire x1="5.08" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -1392,6 +1407,14 @@ Shield form compatible with the Arduino Uno R3.
 <approved hash="101,1,104.14,111.76,MOTORX-1,S,,,,"/>
 <approved hash="101,1,104.14,66.04,MOTORY-1,S,,,,"/>
 <approved hash="101,1,104.14,20.32,MOTORZ-1,S,,,,"/>
+<approved hash="113,1,110.501,111.76,MOTORX,,,,,"/>
+<approved hash="113,1,110.385,66.04,MOTORY,,,,,"/>
+<approved hash="113,1,110.443,20.32,MOTORZ,,,,,"/>
+<approved hash="113,1,-47.9611,106.68,LIMX+,,,,,"/>
+<approved hash="113,1,-47.9611,91.44,LIMY+,,,,,"/>
+<approved hash="113,1,-47.8986,78.74,LIMZ+,,,,,"/>
+<approved hash="113,1,43.18,-12.169,TOOL,,,,,"/>
+<approved hash="113,1,5.08,-12.3073,COOL,,,,,"/>
 </errors>
 </schematic>
 </drawing>
