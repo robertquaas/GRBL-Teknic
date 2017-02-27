@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1106,6 +1106,140 @@ Shield form compatible with the Arduino Uno R3.
 </deviceset>
 </devicesets>
 </library>
+<library name="murata-filter">
+<description>&lt;b&gt;Murata Filters&lt;/b&gt;&lt;p&gt;
+Distributor RS Components&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="NFM3DC">
+<description>&lt;b&gt;NFM3DC/NFM3DP&lt;/b&gt; Reflow Soldering&lt;p&gt;
+Source: http://search.murata.co.jp/Ceramy/image/img/A03X/MT_NFE.pdf</description>
+<wire x1="-1.5" y1="0.525" x2="1.5" y2="0.525" width="0.2032" layer="51"/>
+<wire x1="1.5" y1="0.525" x2="1.5" y2="-0.525" width="0.2032" layer="51"/>
+<wire x1="1.5" y1="-0.525" x2="-1.5" y2="-0.525" width="0.2032" layer="51"/>
+<wire x1="-1.5" y1="-0.525" x2="-1.5" y2="0.525" width="0.2032" layer="51"/>
+<smd name="1" x="-1.95" y="0" dx="1.4" dy="1" layer="1"/>
+<smd name="2@1" x="0" y="-0.9" dx="1" dy="1.2" layer="1"/>
+<smd name="3" x="1.95" y="0" dx="1.4" dy="1" layer="1"/>
+<smd name="2@2" x="0" y="0.9" dx="1" dy="1.2" layer="1"/>
+<text x="-1.778" y="1.778" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-3.048" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="NFM21C">
+<description>&lt;b&gt;NFM21C/NFR21G/NFM21P/NFL21S&lt;/b&gt;&lt;p&gt;
+Source: http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0111S0109NFM21C.pdf&lt;br&gt;
+http://search.murata.co.jp/Ceramy/image/img/A03X/MT_NFE.pdf</description>
+<wire x1="-0.9" y1="0.525" x2="0.9" y2="0.525" width="0.2032" layer="51"/>
+<wire x1="0.9" y1="0.525" x2="0.9" y2="-0.525" width="0.2032" layer="51"/>
+<wire x1="0.9" y1="-0.525" x2="-0.9" y2="-0.525" width="0.2032" layer="51"/>
+<wire x1="-0.9" y1="-0.525" x2="-0.9" y2="0.525" width="0.2032" layer="51"/>
+<smd name="1" x="-1.425" y="0" dx="1.4" dy="0.8" layer="1"/>
+<smd name="2@1" x="0" y="-0.85" dx="0.6" dy="1.1" layer="1"/>
+<smd name="3" x="1.425" y="0" dx="1.4" dy="0.8" layer="1"/>
+<smd name="2@2" x="0" y="0.85" dx="0.6" dy="1.1" layer="1"/>
+<text x="-1.778" y="1.778" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.778" y="-3.048" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="C-FILTER">
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.778" x2="2.54" y2="1.778" width="0.254" layer="94" curve="106.260205"/>
+<wire x1="-2.54" y1="-1.778" x2="2.54" y2="-1.778" width="0.254" layer="94" curve="-106.260205"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.635" width="0.254" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="3" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="2@1" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="2@2" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="NFM" prefix="CF">
+<description>&lt;b&gt;EMIFIL(R) (Capacitor type) Single Circuit Type for Signal Lines&lt;/b&gt;&lt;p&gt;
+Source: http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0111S0109NFM3DC.pdf</description>
+<gates>
+<gate name="G$1" symbol="C-FILTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="3DC" package="NFM3DC">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2@1" pad="2@1"/>
+<connect gate="G$1" pin="2@2" pad="2@2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="FARNELL" constant="no"/>
+<attribute name="MPN" value="NFM3DCC470U1H3L" constant="no"/>
+<attribute name="OC_FARNELL" value="9528288" constant="no"/>
+<attribute name="OC_NEWARK" value="38K6023" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="21C" package="NFM21C">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2@1" pad="2@1"/>
+<connect gate="G$1" pin="2@2" pad="2@2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="NFM21CC102R1H3D" constant="no"/>
+<attribute name="OC_FARNELL" value="1828795" constant="no"/>
+<attribute name="OC_NEWARK" value="84R0165" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SparkFun-PowerSymbols">
+<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
+This library contains power, ground, and voltage-supply symbols.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="DGND">
+<description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" prefix="GND">
+<description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
+<gates>
+<gate name="1" symbol="DGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1125,6 +1259,16 @@ Shield form compatible with the Arduino Uno R3.
 <part name="LIMZ+" library="con-molex-2" deviceset="555X-2" device="V"/>
 <part name="TOOL" library="con-molex-2" deviceset="555X-6" device="V"/>
 <part name="COOL" library="con-molex-2" deviceset="555X-2" device="V"/>
+<part name="CF1" library="murata-filter" deviceset="NFM" device="21C"/>
+<part name="CF2" library="murata-filter" deviceset="NFM" device="21C"/>
+<part name="CF3" library="murata-filter" deviceset="NFM" device="21C"/>
+<part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="CF4" library="murata-filter" deviceset="NFM" device="21C"/>
+<part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="CF5" library="murata-filter" deviceset="NFM" device="21C"/>
+<part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1158,10 +1302,10 @@ Shield form compatible with the Arduino Uno R3.
 <instance part="MOTORZ" gate="-8" x="106.68" y="-15.24"/>
 <instance part="LIMX+" gate="-1" x="-45.72" y="106.68" rot="R180"/>
 <instance part="LIMX+" gate="-2" x="-45.72" y="111.76" rot="R180"/>
-<instance part="LIMY+" gate="-1" x="-45.72" y="91.44" rot="R180"/>
-<instance part="LIMY+" gate="-2" x="-45.72" y="96.52" rot="R180"/>
-<instance part="LIMZ+" gate="-1" x="-45.72" y="78.74" rot="R180"/>
-<instance part="LIMZ+" gate="-2" x="-45.72" y="83.82" rot="R180"/>
+<instance part="LIMY+" gate="-1" x="-45.72" y="81.28" rot="R180"/>
+<instance part="LIMY+" gate="-2" x="-45.72" y="86.36" rot="R180"/>
+<instance part="LIMZ+" gate="-1" x="-45.72" y="55.88" rot="R180"/>
+<instance part="LIMZ+" gate="-2" x="-45.72" y="60.96" rot="R180"/>
 <instance part="TOOL" gate="-1" x="43.18" y="-10.16" rot="R270"/>
 <instance part="TOOL" gate="-2" x="38.1" y="-10.16" rot="R270"/>
 <instance part="TOOL" gate="-3" x="33.02" y="-10.16" rot="R270"/>
@@ -1170,6 +1314,16 @@ Shield form compatible with the Arduino Uno R3.
 <instance part="TOOL" gate="-6" x="17.78" y="-10.16" rot="R270"/>
 <instance part="COOL" gate="-1" x="5.08" y="-10.16" rot="R270"/>
 <instance part="COOL" gate="-2" x="0" y="-10.16" rot="R270"/>
+<instance part="CF1" gate="G$1" x="-27.94" y="106.68"/>
+<instance part="CF2" gate="G$1" x="-27.94" y="81.28"/>
+<instance part="CF3" gate="G$1" x="-27.94" y="55.88"/>
+<instance part="GND1" gate="1" x="-27.94" y="48.26"/>
+<instance part="GND2" gate="1" x="-27.94" y="99.06"/>
+<instance part="GND3" gate="1" x="-27.94" y="73.66"/>
+<instance part="CF4" gate="G$1" x="5.08" y="7.62" rot="R90"/>
+<instance part="GND4" gate="1" x="12.7" y="7.62" rot="R90"/>
+<instance part="CF5" gate="G$1" x="38.1" y="7.62" rot="R90"/>
+<instance part="GND5" gate="1" x="45.72" y="7.62" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -1184,13 +1338,13 @@ Shield form compatible with the Arduino Uno R3.
 <wire x1="12.7" y1="27.94" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-40.64" y1="83.82" x2="-43.18" y2="83.82" width="0.1524" layer="91"/>
-<label x="-40.64" y="83.82" size="1.778" layer="95"/>
+<wire x1="-40.64" y1="60.96" x2="-43.18" y2="60.96" width="0.1524" layer="91"/>
+<label x="-40.64" y="60.96" size="1.778" layer="95"/>
 <pinref part="LIMZ+" gate="-2" pin="S"/>
 </segment>
 <segment>
-<wire x1="-40.64" y1="96.52" x2="-43.18" y2="96.52" width="0.1524" layer="91"/>
-<label x="-40.64" y="96.52" size="1.778" layer="95"/>
+<wire x1="-40.64" y1="86.36" x2="-43.18" y2="86.36" width="0.1524" layer="91"/>
+<label x="-40.64" y="86.36" size="1.778" layer="95"/>
 <pinref part="LIMY+" gate="-2" pin="S"/>
 </segment>
 <segment>
@@ -1264,6 +1418,26 @@ Shield form compatible with the Arduino Uno R3.
 <label x="0" y="-2.54" size="1.778" layer="95"/>
 <pinref part="COOL" gate="-2" pin="S"/>
 </segment>
+<segment>
+<pinref part="CF3" gate="G$1" pin="2@1"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CF1" gate="G$1" pin="2@1"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CF2" gate="G$1" pin="2@1"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CF4" gate="G$1" pin="2@1"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="CF5" gate="G$1" pin="2@1"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VIN" class="0">
 <segment>
@@ -1281,11 +1455,10 @@ Shield form compatible with the Arduino Uno R3.
 <segment>
 <pinref part="B1" gate="G$1" pin="D13"/>
 <wire x1="43.18" y1="30.48" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="30.48" x2="50.8" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="2.54" x2="38.1" y2="2.54" width="0.1524" layer="91"/>
-<pinref part="TOOL" gate="-2" pin="S"/>
-<wire x1="38.1" y1="2.54" x2="38.1" y2="-7.62" width="0.1524" layer="91"/>
 <label x="43.18" y="30.48" size="1.778" layer="95"/>
+<pinref part="CF5" gate="G$1" pin="3"/>
+<wire x1="38.1" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="12.7" x2="50.8" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPINPWM" class="0">
@@ -1304,31 +1477,30 @@ Shield form compatible with the Arduino Uno R3.
 <pinref part="B1" gate="G$1" pin="D12"/>
 <wire x1="43.18" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="33.02" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
-<pinref part="LIMZ+" gate="-1" pin="S"/>
-<wire x1="-43.18" y1="78.74" x2="-33.02" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="78.74" x2="-33.02" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
 <label x="43.18" y="33.02" size="1.778" layer="95"/>
+<wire x1="-22.86" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="CF3" gate="G$1" pin="3"/>
+<wire x1="-22.86" y1="55.88" x2="-22.86" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LIMX" class="0">
 <segment>
 <pinref part="B1" gate="G$1" pin="*D9"/>
 <wire x1="43.18" y1="40.64" x2="66.04" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="LIMX+" gate="-1" pin="S"/>
 <wire x1="66.04" y1="40.64" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="106.68" x2="-43.18" y2="106.68" width="0.1524" layer="91"/>
 <label x="43.18" y="40.64" size="1.778" layer="95"/>
+<pinref part="CF1" gate="G$1" pin="3"/>
+<wire x1="-22.86" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LIMY" class="0">
 <segment>
 <pinref part="B1" gate="G$1" pin="*D10"/>
 <wire x1="43.18" y1="38.1" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="LIMY+" gate="-1" pin="S"/>
-<wire x1="-43.18" y1="91.44" x2="71.12" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="91.44" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="81.28" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
 <label x="43.18" y="38.1" size="1.778" layer="95"/>
+<pinref part="CF2" gate="G$1" pin="3"/>
+<wire x1="-22.86" y1="81.28" x2="71.12" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STEPX" class="0">
@@ -1371,7 +1543,7 @@ Shield form compatible with the Arduino Uno R3.
 <label x="43.18" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="DIRZ" class="0">
 <segment>
 <pinref part="MOTORZ" gate="-3" pin="S"/>
 <pinref part="B1" gate="G$1" pin="D7"/>
@@ -1379,7 +1551,7 @@ Shield form compatible with the Arduino Uno R3.
 <label x="43.18" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="DIRZ" class="0">
+<net name="ENABLE" class="0">
 <segment>
 <pinref part="MOTORX" gate="-4" pin="S"/>
 <pinref part="B1" gate="G$1" pin="D8"/>
@@ -1394,10 +1566,45 @@ Shield form compatible with the Arduino Uno R3.
 </net>
 <net name="COOL" class="0">
 <segment>
-<pinref part="COOL" gate="-1" pin="S"/>
-<wire x1="5.08" y1="-7.62" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="A3"/>
 <wire x1="5.08" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="CF4" gate="G$1" pin="3"/>
+<wire x1="5.08" y1="12.7" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="CF4" gate="G$1" pin="1"/>
+<pinref part="COOL" gate="-1" pin="S"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-7.62" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="TOOL" gate="-2" pin="S"/>
+<wire x1="38.1" y1="2.54" x2="38.1" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="CF5" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="CF1" gate="G$1" pin="1"/>
+<pinref part="LIMX+" gate="-1" pin="S"/>
+<wire x1="-33.02" y1="106.68" x2="-43.18" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="CF2" gate="G$1" pin="1"/>
+<pinref part="LIMY+" gate="-1" pin="S"/>
+<wire x1="-33.02" y1="81.28" x2="-43.18" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="CF3" gate="G$1" pin="1"/>
+<pinref part="LIMZ+" gate="-1" pin="S"/>
+<wire x1="-33.02" y1="55.88" x2="-43.18" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
@@ -1411,8 +1618,6 @@ Shield form compatible with the Arduino Uno R3.
 <approved hash="113,1,110.385,66.04,MOTORY,,,,,"/>
 <approved hash="113,1,110.443,20.32,MOTORZ,,,,,"/>
 <approved hash="113,1,-47.9611,106.68,LIMX+,,,,,"/>
-<approved hash="113,1,-47.9611,91.44,LIMY+,,,,,"/>
-<approved hash="113,1,-47.8986,78.74,LIMZ+,,,,,"/>
 <approved hash="113,1,43.18,-12.169,TOOL,,,,,"/>
 <approved hash="113,1,5.08,-12.3073,COOL,,,,,"/>
 </errors>
